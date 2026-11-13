@@ -1,0 +1,26 @@
+{
+    "inferenceProvider":  "bedrock",
+    "inferenceBedrockRegion":  "us-east-1",
+    "inferenceBedrockProfile":  "workshop",
+    "inferenceModels":  [
+                            "global.anthropic.claude-sonnet-4-6",
+                            "global.anthropic.claude-opus-4-6-v1",
+                            "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+                        ],
+    "isClaudeCodeForDesktopEnabled":  true,
+    "isDesktopExtensionEnabled":  true,
+    "isLocalDevMcpEnabled":  true,
+    "otlpEndpoint":  "http://workshop-networking-alb-886592565.us-east-1.elb.amazonaws.com",
+    "otlpProtocol":  "http/protobuf",
+    "managedMcpServers":  [
+                              {
+                                  "name":  "agentcore-web-search",
+                                  "url":  "https://workshop-websearch-gw-octoz40akr.gateway.bedrock-agentcore.us-east-1.amazonaws.com/mcp",
+                                  "headersHelper":  "C:\\Users\\Administrator\\claude-code-with-bedrock\\websearch-headers.cmd",
+                                  "headersHelperTtlSec":  900,
+                                  "toolPolicy":  {
+                                                     "web-search___WebSearch":  "allow"
+                                                 }
+                              }
+                          ]
+}
